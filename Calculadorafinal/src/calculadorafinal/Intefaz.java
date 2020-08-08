@@ -392,14 +392,17 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void SIETEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIETEActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"7");
     }//GEN-LAST:event_SIETEActionPerformed
 
     private void OCHOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OCHOActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"8");
     }//GEN-LAST:event_OCHOActionPerformed
 
     private void NUEVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NUEVEActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"9");
     }//GEN-LAST:event_NUEVEActionPerformed
 
     private void RAIZCUADRADAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RAIZCUADRADAActionPerformed
@@ -408,14 +411,17 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void CUATROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CUATROActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"4");
     }//GEN-LAST:event_CUATROActionPerformed
 
     private void CINCOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CINCOActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"5");
     }//GEN-LAST:event_CINCOActionPerformed
 
     private void SEISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SEISActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"6");
     }//GEN-LAST:event_SEISActionPerformed
 
     private void EXPONENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXPONENTEActionPerformed
@@ -423,15 +429,19 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_EXPONENTEActionPerformed
 
     private void UNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UNOActionPerformed
-      // TODO add your handling code here:
+       //
+        pantalla.setText(pantalla.getText()+"1");
+      
     }//GEN-LAST:event_UNOActionPerformed
 
     private void DOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOSActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"2");
     }//GEN-LAST:event_DOSActionPerformed
 
     private void TRESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TRESActionPerformed
         // TODO add your handling code here:
+        pantalla.setText(pantalla.getText()+"3");
     }//GEN-LAST:event_TRESActionPerformed
 
     private void PORCENTAJEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PORCENTAJEActionPerformed

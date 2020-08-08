@@ -5,19 +5,8 @@
  */
 package calculadorafinal;
 
-/**
- *
- * @author Acer
- */
 public class Calculadorafinal {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
     }
-    //vamosjuemadre
-    //Espero que funcioneeeeee
-    //funcionoooo
 }
