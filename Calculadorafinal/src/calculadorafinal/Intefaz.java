@@ -429,7 +429,8 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_EXPONENTEActionPerformed
 
     private void UNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UNOActionPerformed
-     
+       //
+        pantalla.setText(pantalla.getText()+"1");
       
     }//GEN-LAST:event_UNOActionPerformed
 
