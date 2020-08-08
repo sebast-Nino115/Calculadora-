@@ -10,5 +10,10 @@ package calculadorafinal;
  * @author Acer
  */
 public class LogicaCalculadora {
+    public double numero1;   
+    public double numero2;
+
+    public LogicaCalculadora(){}
+    
     
 }
