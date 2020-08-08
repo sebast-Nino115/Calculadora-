@@ -439,7 +439,8 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_EXPONENTEActionPerformed
 
     private void UNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UNOActionPerformed
-      // TODO add your handling code here:
+     
+      
     }//GEN-LAST:event_UNOActionPerformed
 
     private void DOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOSActionPerformed
