@@ -440,8 +440,7 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void CEROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEROActionPerformed
         // TODO add your handling code here:
-        
-                
+        pantalla.setText(pantalla.getText()+"0");
     }//GEN-LAST:event_CEROActionPerformed
 
     private void BOTONIGUALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONIGUALActionPerformed
@@ -457,7 +456,7 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BOTONSENActionPerformed
 
     private void BORRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BORRARActionPerformed
-        // TODO add your handling code here:
+        pantalla.setText("");
     }//GEN-LAST:event_BORRARActionPerformed
 
     private void BOTONCOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONCOSActionPerformed
