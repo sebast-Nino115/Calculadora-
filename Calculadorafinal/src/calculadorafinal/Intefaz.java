@@ -39,6 +39,7 @@ public class Intefaz extends javax.swing.JFrame {
         BORRAR = new javax.swing.JButton();
         BOTONCOS = new javax.swing.JButton();
         BOTONTAN = new javax.swing.JButton();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -320,7 +321,10 @@ public class Intefaz extends javax.swing.JFrame {
                                 .addComponent(BOTONCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -363,7 +367,8 @@ public class Intefaz extends javax.swing.JFrame {
                     .addComponent(CERO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BOTONIGUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BOTONPUNTO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -375,6 +380,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTON_DIVISIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTON_DIVISIONActionPerformed
         // TODO add your handling code here:
+        if(!pantalla.getText().equals("")){
+            valor1=pantalla.getText();
+            signo="/";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_BOTON_DIVISIONActionPerformed
 
     private void BOTONMULTIPLICACIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONMULTIPLICACIONActionPerformed
@@ -388,6 +398,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTONSUMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSUMAActionPerformed
         // TODO add your handling code here:
+        if(!pantalla.getText().equals("")){
+            valor1=pantalla.getText();
+            signo="+";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_BOTONSUMAActionPerformed
 
     private void SIETEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIETEActionPerformed
@@ -446,6 +461,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void PORCENTAJEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PORCENTAJEActionPerformed
         // TODO add your handling code here:
+        contenido=pantalla.getText();
+        if(contenido.length()>0){
+            resultado=Double.parseDouble(contenido);
+        }
+        
     }//GEN-LAST:event_PORCENTAJEActionPerformed
 
     private void CEROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CEROActionPerformed
@@ -455,14 +475,26 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTONIGUALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONIGUALActionPerformed
         // TODO add your handling code here:
+        String resultadototal;
+        valor2=pantalla.getText();
+        if(!valor2.equals("")){
+        resultadototal=operaciones(valor1,valor2,signo);
+        pantalla.setText(resultadototal);
+        }
     }//GEN-LAST:event_BOTONIGUALActionPerformed
 
     private void BOTONPUNTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONPUNTOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BOTONPUNTOActionPerformed
-
+    
     private void BOTONSENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSENActionPerformed
         // TODO add your handling code here:
+        if(contenido.length()>0){
+            contenido=pantalla.getText();
+            Double valor1rad = Math.toRadians(Double.parseDouble(valor1));
+            resultado = Math.sin(valor1rad);
+        } 
+        
     }//GEN-LAST:event_BOTONSENActionPerformed
 
     private void BORRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BORRARActionPerformed
@@ -512,6 +544,22 @@ public class Intefaz extends javax.swing.JFrame {
         });
     }
 
+     public static String operaciones(String valor1, String valor2, String signo){
+        Double resultadocalc= 0.0;
+        String respuesta;
+
+        
+        if(signo.equals("+")){
+            resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
+        }
+        else if (signo.equals("/")){
+            resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
+        }
+        
+        respuesta=resultadocalc.toString();
+        return respuesta;
+        
+    } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BORRAR;
     private javax.swing.JButton BOTONCOS;
@@ -536,6 +584,7 @@ public class Intefaz extends javax.swing.JFrame {
     private javax.swing.JButton SIETE;
     private javax.swing.JButton TRES;
     private javax.swing.JButton UNO;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JTextField pantalla;
     // End of variables declaration//GEN-END:variables
 }
