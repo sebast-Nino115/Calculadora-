@@ -47,37 +47,33 @@
                                   <Component id="TRES" min="-2" pref="49" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="PORCENTAJE" min="-2" pref="49" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="BOTONTAN" min="-2" pref="91" max="-2" attributes="0"/>
                               </Group>
                               <Component id="BOTONIGUAL" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="BOTONTAN" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="BOTONCOS" min="-2" pref="91" max="-2" attributes="0"/>
+                              <Component id="BOTONSEN" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="CUATRO" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="SIETE" min="-2" pref="49" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="CINCO" min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Component id="OCHO" min="-2" pref="49" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="SEIS" min="-2" pref="49" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                  <Component id="EXPONENTE" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Component id="NUEVE" min="-2" pref="49" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="RAIZCUADRADA1" min="-2" pref="49" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="BORRAR" min="-2" pref="91" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="SIETE" min="-2" pref="49" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="OCHO" min="-2" pref="49" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                          <Component id="NUEVE" min="-2" pref="49" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="RAIZCUADRADA" min="-2" pref="49" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
                                           <Component id="BOTON_DIVISION" min="-2" pref="49" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="BOTONMULTIPLICACION" min="-2" pref="49" max="-2" attributes="0"/>
@@ -86,27 +82,28 @@
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="BOTONSUMA" min="-2" pref="49" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="CUATRO" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="CINCO" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="SEIS" min="-2" pref="49" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="EXPONENTE" min="-2" pref="51" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="Borrarerror" max="32767" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="BOTONSEN" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="BORRAR" min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="BOTONCOS" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Component id="pantalla" min="-2" pref="348" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Component id="jDesktopPane1" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
               </Group>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -115,33 +112,31 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="pantalla" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BOTON_DIVISION" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BOTONRESTA" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BOTONSUMA" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BOTONMULTIPLICACION" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BORRAR" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BOTON_DIVISION" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="BOTONRESTA" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="BOTONSUMA" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="BOTONMULTIPLICACION" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="Borrarerror" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="SIETE" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="NUEVE" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="RAIZCUADRADA" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="OCHO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BOTONSEN" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="BORRAR" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="RAIZCUADRADA1" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="BOTONCOS" alignment="1" min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CUATRO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="SEIS" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="CINCO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="EXPONENTE" min="-2" pref="49" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="CUATRO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="SEIS" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="CINCO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="BOTONSEN" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="EXPONENTE" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -149,16 +144,16 @@
                   <Component id="TRES" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="PORCENTAJE" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="DOS" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="BOTONTAN" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="BOTONCOS" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="CERO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="BOTONIGUAL" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="BOTONPUNTO" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="BOTONTAN" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jDesktopPane1" min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -265,20 +260,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NUEVEActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="RAIZCUADRADA">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="99" green="66" red="0" type="rgb"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&#x221a;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RAIZCUADRADAActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="CUATRO">
@@ -491,7 +472,33 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BOTONTANActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
-    </Container>
+    <Component class="javax.swing.JButton" name="Borrarerror">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x2190;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BorrarerrorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="RAIZCUADRADA1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RAIZCUADRADA1ActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
