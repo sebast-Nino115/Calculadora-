@@ -5,8 +5,12 @@ public class Intefaz extends javax.swing.JFrame {
 
     private boolean punto = true;
     String valor1, valor2, signo, contenido;
+<<<<<<< HEAD
     double resultado;
     int hola;
+=======
+    Double resultado;
+>>>>>>> master
     public Intefaz() {
         initComponents();
     }
@@ -24,7 +28,6 @@ public class Intefaz extends javax.swing.JFrame {
         SIETE = new javax.swing.JButton();
         OCHO = new javax.swing.JButton();
         NUEVE = new javax.swing.JButton();
-        RAIZCUADRADA = new javax.swing.JButton();
         CUATRO = new javax.swing.JButton();
         CINCO = new javax.swing.JButton();
         SEIS = new javax.swing.JButton();
@@ -40,7 +43,8 @@ public class Intefaz extends javax.swing.JFrame {
         BORRAR = new javax.swing.JButton();
         BOTONCOS = new javax.swing.JButton();
         BOTONTAN = new javax.swing.JButton();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        Borrarerror = new javax.swing.JButton();
+        RAIZCUADRADA1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -110,15 +114,6 @@ public class Intefaz extends javax.swing.JFrame {
         NUEVE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NUEVEActionPerformed(evt);
-            }
-        });
-
-        RAIZCUADRADA.setBackground(new java.awt.Color(0, 102, 153));
-        RAIZCUADRADA.setForeground(new java.awt.Color(255, 255, 255));
-        RAIZCUADRADA.setText("√");
-        RAIZCUADRADA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RAIZCUADRADAActionPerformed(evt);
             }
         });
 
@@ -257,6 +252,24 @@ public class Intefaz extends javax.swing.JFrame {
             }
         });
 
+        Borrarerror.setBackground(new java.awt.Color(0, 102, 153));
+        Borrarerror.setForeground(new java.awt.Color(255, 255, 255));
+        Borrarerror.setText("←");
+        Borrarerror.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BorrarerrorActionPerformed(evt);
+            }
+        });
+
+        RAIZCUADRADA1.setBackground(new java.awt.Color(0, 102, 153));
+        RAIZCUADRADA1.setForeground(new java.awt.Color(255, 255, 255));
+        RAIZCUADRADA1.setText("√");
+        RAIZCUADRADA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RAIZCUADRADA1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -281,32 +294,28 @@ public class Intefaz extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(TRES, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(PORCENTAJE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(BOTONTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(BOTONIGUAL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(PORCENTAJE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(BOTONIGUAL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(BOTONTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BOTONCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BOTONSEN, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addContainerGap()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(CUATRO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(SIETE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(CINCO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(OCHO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(10, 10, 10)
-                                    .addComponent(SEIS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(EXPONENTE)
-                                    .addGap(8, 8, 8))
+                                    .addComponent(NUEVE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(14, 14, 14)
+                                    .addComponent(RAIZCUADRADA1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(BORRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(SIETE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(OCHO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(10, 10, 10)
-                                            .addComponent(NUEVE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(RAIZCUADRADA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(BOTON_DIVISION, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -314,47 +323,48 @@ public class Intefaz extends javax.swing.JFrame {
                                             .addGap(10, 10, 10)
                                             .addComponent(BOTONRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(BOTONSUMA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(BOTONSEN, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(BORRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(BOTONCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(BOTONSUMA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(CUATRO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(CINCO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(10, 10, 10)
+                                            .addComponent(SEIS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(10, 10, 10)
+                                            .addComponent(EXPONENTE, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(Borrarerror, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BOTON_DIVISION, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONSUMA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONMULTIPLICACION, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BORRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BOTON_DIVISION, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOTONRESTA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOTONSUMA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOTONMULTIPLICACION, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Borrarerror, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SIETE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NUEVE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RAIZCUADRADA, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(OCHO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONSEN, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BORRAR, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RAIZCUADRADA1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(BOTONCOS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CUATRO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SEIS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CINCO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CUATRO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SEIS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CINCO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTONSEN, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EXPONENTE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -362,14 +372,14 @@ public class Intefaz extends javax.swing.JFrame {
                     .addComponent(TRES, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PORCENTAJE, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DOS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BOTONCOS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CERO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BOTONIGUAL, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BOTONPUNTO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BOTONPUNTO, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTONTAN, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -394,7 +404,11 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BOTONMULTIPLICACIONActionPerformed
 
     private void BOTONRESTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONRESTAActionPerformed
-        // TODO add your handling code here:
+        if(!pantalla.getText().equals("")){
+            valor1=pantalla.getText();
+            signo="-";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_BOTONRESTAActionPerformed
 
     private void BOTONSUMAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSUMAActionPerformed
@@ -420,10 +434,6 @@ public class Intefaz extends javax.swing.JFrame {
         // TODO add your handling code here:
         pantalla.setText(pantalla.getText()+"9");
     }//GEN-LAST:event_NUEVEActionPerformed
-
-    private void RAIZCUADRADAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RAIZCUADRADAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RAIZCUADRADAActionPerformed
 
     private void CUATROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CUATROActionPerformed
         // TODO add your handling code here:
@@ -490,8 +500,8 @@ public class Intefaz extends javax.swing.JFrame {
     
     private void BOTONSENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSENActionPerformed
         // TODO add your handling code here:
+        contenido=pantalla.getText();
         if(contenido.length()>0){
-            contenido=pantalla.getText();
             Double valor1rad = Math.toRadians(Double.parseDouble(valor1));
             resultado = Math.sin(valor1rad);
             resultado = resultado;
@@ -504,12 +514,42 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BORRARActionPerformed
 
     private void BOTONCOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONCOSActionPerformed
-        // TODO add your handling code here:
+        valor1=pantalla.getText();
+        if(valor1.length()>0){
+            resultado = Math.cos(Double.parseDouble(valor1));
+            pantalla.setText(resultado.toString()+" Rad");
+        } 
     }//GEN-LAST:event_BOTONCOSActionPerformed
 
     private void BOTONTANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONTANActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BOTONTANActionPerformed
+
+    private void BorrarerrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarerrorActionPerformed
+       //Boton para borrar de uno en uno
+       contenido=pantalla.getText();
+       if(contenido.length()>0){
+           contenido=contenido.substring(0,contenido.length()-1);
+           pantalla.setText(contenido);
+       }
+       
+    }//GEN-LAST:event_BorrarerrorActionPerformed
+
+    private void RAIZCUADRADA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RAIZCUADRADA1ActionPerformed
+        // TODO add your handling code here:
+        Double Convertir;
+        contenido=pantalla.getText();
+        if(contenido.length()>0){
+            Convertir=Double.parseDouble(contenido);
+            if(Convertir>=0){
+                resultado = Math.sqrt(Convertir);
+                pantalla.setText(resultado.toString());
+            }else{
+                pantalla.setText("Math Error");
+            }
+                    
+        }
+    }//GEN-LAST:event_RAIZCUADRADA1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -547,7 +587,7 @@ public class Intefaz extends javax.swing.JFrame {
     }
 
      public static String operaciones(String valor1, String valor2, String signo){
-        Double resultadocalc= 0.0;
+        Double resultadocalc= 0.0, num2=0.0;
         String respuesta;
 
         
@@ -556,12 +596,15 @@ public class Intefaz extends javax.swing.JFrame {
         }
         else if (signo.equals("/")){
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
+        }else if (signo.equals("-")){
+            resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
         }
         
         respuesta=resultadocalc.toString();
         return respuesta;
         
     } 
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BORRAR;
     private javax.swing.JButton BOTONCOS;
@@ -573,6 +616,7 @@ public class Intefaz extends javax.swing.JFrame {
     private javax.swing.JButton BOTONSUMA;
     private javax.swing.JButton BOTONTAN;
     private javax.swing.JButton BOTON_DIVISION;
+    private javax.swing.JButton Borrarerror;
     private javax.swing.JButton CERO;
     private javax.swing.JButton CINCO;
     private javax.swing.JButton CUATRO;
@@ -581,12 +625,11 @@ public class Intefaz extends javax.swing.JFrame {
     private javax.swing.JButton NUEVE;
     private javax.swing.JButton OCHO;
     private javax.swing.JButton PORCENTAJE;
-    private javax.swing.JButton RAIZCUADRADA;
+    private javax.swing.JButton RAIZCUADRADA1;
     private javax.swing.JButton SEIS;
     private javax.swing.JButton SIETE;
     private javax.swing.JButton TRES;
     private javax.swing.JButton UNO;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JTextField pantalla;
     // End of variables declaration//GEN-END:variables
 }
