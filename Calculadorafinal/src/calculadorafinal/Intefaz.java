@@ -5,12 +5,8 @@ public class Intefaz extends javax.swing.JFrame {
 
     private boolean punto = true;
     String valor1, valor2, signo, contenido;
-<<<<<<< HEAD
-    double resultado;
-    int hola;
-=======
+
     Double resultado;
->>>>>>> master
     public Intefaz() {
         initComponents();
     }
