@@ -6,6 +6,7 @@ public class Intefaz extends javax.swing.JFrame {
     private boolean punto = true;
     String valor1, valor2, signo, contenido;
     double resultado;
+    int hola;
     public Intefaz() {
         initComponents();
     }
@@ -493,6 +494,7 @@ public class Intefaz extends javax.swing.JFrame {
             contenido=pantalla.getText();
             Double valor1rad = Math.toRadians(Double.parseDouble(valor1));
             resultado = Math.sin(valor1rad);
+            resultado = resultado;
         } 
         
     }//GEN-LAST:event_BOTONSENActionPerformed
