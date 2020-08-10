@@ -400,6 +400,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTONMULTIPLICACIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONMULTIPLICACIONActionPerformed
         // TODO add your handling code here:
+        if(!pantalla.getText().equals("")){
+            valor1=pantalla.getText();
+            signo="*";
+            pantalla.setText("");
+        }
         
     }//GEN-LAST:event_BOTONMULTIPLICACIONActionPerformed
 
@@ -452,6 +457,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void EXPONENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXPONENTEActionPerformed
         // TODO add your handling code here:
+        if(!pantalla.getText().equals("")){
+            valor1=pantalla.getText();
+            signo="x^y";
+            pantalla.setText("");
+        }
     }//GEN-LAST:event_EXPONENTEActionPerformed
 
     private void UNOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UNOActionPerformed
@@ -496,6 +506,16 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTONPUNTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONPUNTOActionPerformed
         // TODO add your handling code here:
+        contenido=pantalla.getText();
+        if(contenido.length()<=0){
+            pantalla.setText("0.");
+        }else
+            if(pantalla.getText().contains(".")){
+                
+            }else{
+                pantalla.setText(pantalla.getText()+".");
+                punto=false;
+            }
     }//GEN-LAST:event_BOTONPUNTOActionPerformed
     
     private void BOTONSENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSENActionPerformed
@@ -598,6 +618,10 @@ public class Intefaz extends javax.swing.JFrame {
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
         }else if (signo.equals("-")){
             resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
+        }else if(signo.equals("*")){
+            resultadocalc=Double.parseDouble(valor1)*Double.parseDouble(valor2);
+        }else if(signo.equals("x^y")){
+            resultadocalc = Math.pow(Double.parseDouble(valor1),Double.parseDouble(valor2));
         }
         
         respuesta=resultadocalc.toString();
