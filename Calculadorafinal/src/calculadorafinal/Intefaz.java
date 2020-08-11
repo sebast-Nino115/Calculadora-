@@ -539,6 +539,12 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTONTANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONTANActionPerformed
         // TODO add your handling code here:
+        valor1=pantalla.getText();
+        if(valor1.length()>0){
+            resultado = Math.tan(Double.parseDouble(valor1));
+            pantalla.setText(resultado.toString()+" Rad");   
+        } 
+         
     }//GEN-LAST:event_BOTONTANActionPerformed
 
     private void BorrarerrorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarerrorActionPerformed
