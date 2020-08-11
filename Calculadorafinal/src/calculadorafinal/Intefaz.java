@@ -405,7 +405,11 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BOTONMULTIPLICACIONActionPerformed
 
     private void BOTONRESTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONRESTAActionPerformed
-        if(!pantalla.getText().equals("")){
+        if(pantalla.getText().equals("")){
+            pantalla.setText("-");
+            valor1=pantalla.getText();
+            signo="-";
+        }else if(!pantalla.getText().equals("")){
             valor1=pantalla.getText();
             signo="-";
             pantalla.setText("");
