@@ -387,8 +387,9 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTON_DIVISIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTON_DIVISIONActionPerformed
         // TODO add your handling code here:
+        Double convertir;
         if(!pantalla.getText().equals("")){
-            valor1=pantalla.getText();
+            valor1 = pantalla.getText();
             signo="/";
             pantalla.setText("");
         }
@@ -482,10 +483,11 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void PORCENTAJEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PORCENTAJEActionPerformed
         // TODO add your handling code here:
-        contenido=pantalla.getText();
-        if(contenido.length()>0){
-            resultado=Double.parseDouble(contenido);
-        }
+        valor1=pantalla.getText();
+        if(valor1.length()>0){
+            resultado = Double.parseDouble(valor1)*0.19;
+            pantalla.setText(resultado.toString()+"%");
+        } 
         
     }//GEN-LAST:event_PORCENTAJEActionPerformed
 
@@ -499,8 +501,15 @@ public class Intefaz extends javax.swing.JFrame {
         String resultadototal;
         valor2=pantalla.getText();
         if(!valor2.equals("")){
-        resultadototal=operaciones(valor1,valor2,signo);
-        pantalla.setText(resultadototal);
+            
+                resultadototal=operaciones(valor1,valor2,signo);
+                if(signo.equals("/")){
+                    if(valor2.equals("0")){
+                        resultadototal="No se puede dividir entre cero";
+                    }
+                }
+                pantalla.setText(resultadototal);
+            
         }
     }//GEN-LAST:event_BOTONIGUALActionPerformed
 
@@ -520,11 +529,10 @@ public class Intefaz extends javax.swing.JFrame {
     
     private void BOTONSENActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONSENActionPerformed
         // TODO add your handling code here:
-        contenido=pantalla.getText();
-        if(contenido.length()>0){
-            Double valor1rad = Math.toRadians(Double.parseDouble(valor1));
-            resultado = Math.sin(valor1rad);
-            resultado = resultado;
+        valor1=pantalla.getText();
+        if(valor1.length()>0){
+            resultado = Math.sin((Double.parseDouble(valor1)*Math.PI)/180);
+            pantalla.setText(resultado.toString()+" Rad");
         } 
         
     }//GEN-LAST:event_BOTONSENActionPerformed
@@ -545,8 +553,20 @@ public class Intefaz extends javax.swing.JFrame {
         // TODO add your handling code here:
         valor1=pantalla.getText();
         if(valor1.length()>0){
+<<<<<<< Updated upstream
             resultado = Math.tan(Double.parseDouble(valor1));
             pantalla.setText(resultado.toString()+" °");   
+=======
+            
+            if(valor1.equals("90")){
+                pantalla.setText("");
+            }
+            else{
+                resultado = Math.tan(Double.parseDouble(valor1));
+            }
+            
+            pantalla.setText(resultado.toString()+" Rad");   
+>>>>>>> Stashed changes
         } 
          
     }//GEN-LAST:event_BOTONTANActionPerformed
@@ -612,18 +632,21 @@ public class Intefaz extends javax.swing.JFrame {
     }
 
      public static String operaciones(String valor1, String valor2, String signo){
-        Double resultadocalc= 0.0, num2=0.0;
+        Double resultadocalc= 0.0;
         String respuesta;
-
         
         if(signo.equals("+")){
             resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
+<<<<<<< Updated upstream
         }
         else if (signo.equals("/")){
             num2=Double.parseDouble(valor2);
             if(num2==0){
                respuesta="Error matematico";
             }else{
+=======
+        }else if (signo.equals("/")){
+>>>>>>> Stashed changes
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
             }
         }else if (signo.equals("-")){
