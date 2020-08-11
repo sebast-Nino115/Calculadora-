@@ -387,7 +387,6 @@ public class Intefaz extends javax.swing.JFrame {
 
     private void BOTON_DIVISIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTON_DIVISIONActionPerformed
         // TODO add your handling code here:
-        Double convertir;
         if(!pantalla.getText().equals("")){
             valor1 = pantalla.getText();
             signo="/";
@@ -532,7 +531,7 @@ public class Intefaz extends javax.swing.JFrame {
         valor1=pantalla.getText();
         if(valor1.length()>0){
             resultado = Math.sin((Double.parseDouble(valor1)*Math.PI)/180);
-            pantalla.setText(resultado.toString()+" Rad");
+            pantalla.setText(resultado.toString()+"°");
         } 
         
     }//GEN-LAST:event_BOTONSENActionPerformed
@@ -554,18 +553,14 @@ public class Intefaz extends javax.swing.JFrame {
         valor1=pantalla.getText();
         if(valor1.length()>0){
 
-            resultado = Math.tan(Double.parseDouble(valor1));
-            pantalla.setText(resultado.toString()+" °");   
-   
-            if(valor1.equals("90")){
-                pantalla.setText("");
+            if(valor1.equals("90")||valor1.equals("270")){
+                pantalla.setText(" La tan de 90 y 270 es indefinida");
             }
             else{
-                resultado = Math.tan(Double.parseDouble(valor1));
+                resultado = Math.tan((Double.parseDouble(valor1)*Math.PI)/180);
+                pantalla.setText(resultado.toString()+"°");
             }
             
-            pantalla.setText(resultado.toString()+" Rad");   
-
         } 
          
     }//GEN-LAST:event_BOTONTANActionPerformed
@@ -636,9 +631,7 @@ public class Intefaz extends javax.swing.JFrame {
         
         if(signo.equals("+")){
             resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
-   
         }else if (signo.equals("/")){
-
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
         }else if (signo.equals("-")){
             resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
