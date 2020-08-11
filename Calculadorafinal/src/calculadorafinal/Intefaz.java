@@ -553,11 +553,10 @@ public class Intefaz extends javax.swing.JFrame {
         // TODO add your handling code here:
         valor1=pantalla.getText();
         if(valor1.length()>0){
-<<<<<<< Updated upstream
+
             resultado = Math.tan(Double.parseDouble(valor1));
             pantalla.setText(resultado.toString()+" °");   
-=======
-            
+   
             if(valor1.equals("90")){
                 pantalla.setText("");
             }
@@ -566,7 +565,7 @@ public class Intefaz extends javax.swing.JFrame {
             }
             
             pantalla.setText(resultado.toString()+" Rad");   
->>>>>>> Stashed changes
+
         } 
          
     }//GEN-LAST:event_BOTONTANActionPerformed
@@ -637,18 +636,10 @@ public class Intefaz extends javax.swing.JFrame {
         
         if(signo.equals("+")){
             resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
-<<<<<<< Updated upstream
-        }
-        else if (signo.equals("/")){
-            num2=Double.parseDouble(valor2);
-            if(num2==0){
-               respuesta="Error matematico";
-            }else{
-=======
+   
         }else if (signo.equals("/")){
->>>>>>> Stashed changes
+
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
-            }
         }else if (signo.equals("-")){
             resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
         }else if(signo.equals("*")){
@@ -657,6 +648,7 @@ public class Intefaz extends javax.swing.JFrame {
             resultadocalc = Math.pow(Double.parseDouble(valor1),Double.parseDouble(valor2));
         }
         
+       
         respuesta=resultadocalc.toString();
         return respuesta;
         
