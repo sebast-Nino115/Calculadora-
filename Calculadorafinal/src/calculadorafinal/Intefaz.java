@@ -405,7 +405,7 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BOTONMULTIPLICACIONActionPerformed
 
     private void BOTONRESTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONRESTAActionPerformed
-        if(pantalla.getText().equals("")){
+         if(pantalla.getText().equals("")){
             pantalla.setText("-");
             valor1=pantalla.getText();
             signo="-";
@@ -536,8 +536,8 @@ public class Intefaz extends javax.swing.JFrame {
     private void BOTONCOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOTONCOSActionPerformed
         valor1=pantalla.getText();
         if(valor1.length()>0){
-            resultado = Math.cos(Double.parseDouble(valor1));
-            pantalla.setText(resultado.toString()+" Rad");
+            resultado =Math.cos((Double.parseDouble(valor1)*Math.PI)/180);
+            pantalla.setText(resultado.toString()+"°");
         } 
     }//GEN-LAST:event_BOTONCOSActionPerformed
 
@@ -546,7 +546,7 @@ public class Intefaz extends javax.swing.JFrame {
         valor1=pantalla.getText();
         if(valor1.length()>0){
             resultado = Math.tan(Double.parseDouble(valor1));
-            pantalla.setText(resultado.toString()+" Rad");   
+            pantalla.setText(resultado.toString()+" °");   
         } 
          
     }//GEN-LAST:event_BOTONTANActionPerformed
@@ -562,7 +562,6 @@ public class Intefaz extends javax.swing.JFrame {
     }//GEN-LAST:event_BorrarerrorActionPerformed
 
     private void RAIZCUADRADA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RAIZCUADRADA1ActionPerformed
-        // TODO add your handling code here:
         Double Convertir;
         contenido=pantalla.getText();
         if(contenido.length()>0){
@@ -571,7 +570,7 @@ public class Intefaz extends javax.swing.JFrame {
                 resultado = Math.sqrt(Convertir);
                 pantalla.setText(resultado.toString());
             }else{
-                pantalla.setText("Math Error");
+                pantalla.setText("Error matematico");
             }
                     
         }
@@ -621,7 +620,12 @@ public class Intefaz extends javax.swing.JFrame {
             resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
         }
         else if (signo.equals("/")){
+            num2=Double.parseDouble(valor2);
+            if(num2==0){
+               respuesta="Error matematico";
+            }else{
             resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
+            }
         }else if (signo.equals("-")){
             resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
         }else if(signo.equals("*")){
