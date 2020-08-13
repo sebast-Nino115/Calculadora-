@@ -2,6 +2,7 @@
 package calculadorafinal;
 
 public class Intefaz extends javax.swing.JFrame {
+    LogicaCalculadora  modelocalculadora= new LogicaCalculadora();
 
     private boolean punto = true;
     String valor1, valor2, signo, contenido;
@@ -501,7 +502,7 @@ public class Intefaz extends javax.swing.JFrame {
         valor2=pantalla.getText();
         if(!valor2.equals("")){
             
-                resultadototal=operaciones(valor1,valor2,signo);
+                resultadototal=modelocalculadora.operaciones(valor1, valor2, signo);
                 if(signo.equals("/")){
                     if(valor2.equals("0")){
                         resultadototal="No se puede dividir entre cero";
@@ -625,27 +626,7 @@ public class Intefaz extends javax.swing.JFrame {
         });
     }
 
-     public static String operaciones(String valor1, String valor2, String signo){
-        Double resultadocalc= 0.0;
-        String respuesta;
-        
-        if(signo.equals("+")){
-            resultadocalc=Double.parseDouble(valor1)+Double.parseDouble(valor2);
-        }else if (signo.equals("/")){
-            resultadocalc=Double.parseDouble(valor1)/Double.parseDouble(valor2);
-        }else if (signo.equals("-")){
-            resultadocalc=Double.parseDouble(valor1)-Double.parseDouble(valor2);
-        }else if(signo.equals("*")){
-            resultadocalc=Double.parseDouble(valor1)*Double.parseDouble(valor2);
-        }else if(signo.equals("x^y")){
-            resultadocalc = Math.pow(Double.parseDouble(valor1),Double.parseDouble(valor2));
-        }
-        
-       
-        respuesta=resultadocalc.toString();
-        return respuesta;
-        
-    } 
+    
      
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BORRAR;
